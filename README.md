@@ -4,6 +4,8 @@ The formal documentation for the game PacMacro, held by SFU's Computing Science 
 
 This document is written in pdfLaTeX.
 
+[Download link](https://github.com/pacmacro/pm-specification/raw/master/pacmacro-specification.pdf)
+
 ## Required Packages
 
 * texlive
