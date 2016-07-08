@@ -39,31 +39,33 @@
 	\section{Description}
 	\label{sec:description}
 
-	This is the official specification for the game \emph{Pacmacro}.
+	This is the official specification for the game \emph{PacMacro}.
 
-	\emph{PacMacro} is a game organized and run by Simon Fraser University's Computing Science Student Society during Frosh Week, each September. It is a variation on the classic game \href{https://en.wikipedia.org/wiki/Pac-Man}{Pac-Man}.
+	\emph{PacMacro} is a game organized and run by Simon Fraser University's Computing Science Student Society during Frosh Week each September. It is a variation on the classic game \href{https://en.wikipedia.org/wiki/Pac-Man}{Pac-Man}.
 
 	\section{Summary}
 	\label{sec:summary}
 
-	Of the teams of players, a single team is determined to be the `Pacman' team, and the other teams are determined to be the `Ghost' teams.
+	Of the teams of players, a single team is determined to be the `Pacman' team and the other teams are determined to be the `Ghost' teams.
 
-	One player from each team plays in downtown Vancouver; the other players play at the Simon Fraser University Vancouver campus.
+	One player from each team plays by running around downtown Vancouver; the other players play at the Simon Fraser University Vancouver campus.
 
 	\subsection{Objective of the Game}
 	\label{subsec:summary:objective-of-the-game}
 
-	The goal of the game for the Pacman is to eat all pellets on the map before the time runs out, without being caught by the Ghosts.
+	The goal of a round for the Pacman is to eat all pellets on the map before the time runs out without being caught by the Ghosts.
 
-	The goal of the game for the Ghosts is to catch the Pacman before they eat all the pellets or delay the Pacman until the time runs out.
+	The goal of a round for the Ghosts is to catch the Pacman before they eat all the pellets or delay the Pacman until the time runs out.
 
-	The game ends when any of the following scenarios occurs:
+	A round ends when any of the following scenarios occurs:
 	\begin{enumerate}
 		\item The Pacman eats all of the pellets.
 		\item A Ghost catches the Pacman.
 		\item The Pacman catches all of the Ghosts while the \hyperref[subsec:gameplay:formal-rules]{red pellet} is active.
 		\item The Pacman runs out of time.
 	\end{enumerate}
+
+	Each team will be assigned at least one round to play as the Pacman team. The number of total rounds is determined by the gamemasters.
 
 	\section{Gameplay}
 	\label{sec:gameplay}
@@ -73,10 +75,26 @@
 
 	\begin{itemize}
 		\item The players are grouped into teams, only one of which is the Pacman team and the remainder of which are Ghost teams.
-		\item For each team, one player plays the game running around in downtown Vancouver and the other players play the game at the Simon Fraser University Vancouver campus in a control room.
+		\item For each team, one player plays the game running around in downtown Vancouver and the other players play the game at the Simon Fraser University Vancouver campus in control rooms. The Pacman team is given one room and the Ghost teams are given another room.
 		\item The player running around downtown Vancouver communicates with the rest of their team in the control room through a phone call.
-		\item The players in the control room may use the PacMacro mobile application to see the map of the players' locations. The Pacman team will be able to see the locations of all players (the Pacman and all Ghosts), while the Ghost teams will only be able to see the locations of the Pacman and their own Ghost player [clarification needed].
-		\item If Pacman eats the \emph{red pellet}, then a period begins during which the Pacman may eat the Ghosts in a reversal of roles [behaviour of the ghosts after being caught has yet to be determined].
+		\item If Pacman eats the \emph{red pellet}, then a period begins during which the Pacman may eat the Ghosts in a reversal of roles. During this period:
+		\begin{itemize}
+			\item Any Ghosts which the Pacman eats are incapacitated and out of the game for the rest of the round.
+			\item If Pacman eats all the Ghosts, then the Pacman wins the round.
+			\item The view permissions may change (see \hyperref[subsec:gameplay:mobile-application]{Mobile Application} for details).
+		\end{itemize}
+	\end{itemize}
+
+	\subsection{Mobile Application}
+	\label{subsec:gameplay:mobile-application}
+
+	\begin{itemize}
+		\item The players in the control room may use the PacMacro mobile application to see the map of the players' locations.
+		\begin{itemize}
+			\item During play, the Pacman team can see the locations of all players (the Pacman and all Ghosts).
+			\item During normal play, the Ghost teams will only be able to see the locations of the Ghost players.
+			\item During the period of time when the red pellet is active, the Ghost teams can see the location of the Pacman player as well as all the Ghost players.
+		\end{itemize}
 	\end{itemize}
 
 	\subsection{Boundaries and Limits}
@@ -85,7 +103,7 @@
 	\begin{itemize}
 		\item The players running around may not garner any knowledge of the Pacman's location apart from the information given by their team in the control room and visually seeing the Pacman. They may not use the PacMacro mobile application during this time.
 		\item The players running around may not venture outside of the geographical boundaries set by the gamemasters.
-		\item The players at SFU may not intentionally listen to the other players' conversations to gain better knowledge of the other teams' positions.
+		\item The players at SFU may not intentionally listen to the opposing team's conversations to gain better knowledge of the other teams' positions.
 		\item Ghosts may not loiter in a specific location in order to block the Pacman. This is up to the discretion of the gamemasters during the game.
 	\end{itemize}
 
