@@ -1,6 +1,6 @@
-# PacMacro Specification
+# Pac Macro Specification
 
-The formal documentation for the game PacMacro, held by SFU's Computing Science Student Society.
+The formal documentation for the game Pac Macro, held by SFU's Computing Science Student Society.
 
 This document is written in pdfLaTeX.
 
